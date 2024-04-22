@@ -61,6 +61,14 @@ telefon varchar(20),
 mail VARCHAR(50),
 PRIMARY KEY(iletisim_id)
 );
+create table if not exists kullanici_kayit(
+k_kayit_id INT AUTO_INCREMENT,
+kullanici_adi varchar(30) UNIQUE,
+sifre varchar(30),
+arac_id INT,
+primary key(k_kayit_id),
+foreign key(arac_id) references arac(arac_id)
+);
 INSERT INTO tarife (tarife_tipi, ucret) VALUES
 ('Tam', 100),
 ('Emekli', 85),

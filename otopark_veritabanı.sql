@@ -65,9 +65,9 @@ create table if not exists kullanici_kayit(
 k_kayit_id INT AUTO_INCREMENT,
 kullanici_adi varchar(30) UNIQUE,
 sifre varchar(30),
-arac_id INT,
+kullanici_id INT,
 primary key(k_kayit_id),
-foreign key(arac_id) references arac(arac_id)
+foreign key(kullanici_id) references kullanici(kullanici_id)
 );
 INSERT INTO tarife (tarife_tipi, ucret) VALUES
 ('Tam', 100),

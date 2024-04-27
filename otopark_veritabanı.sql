@@ -129,6 +129,13 @@ CREATE INDEX kullanici_adi_index ON kullanici_kayit(kullanici_adi);
 CREATE INDEX admin_bilgi_index ON admin(kullanici_adi, sifre);
 CREATE INDEX tarife_index ON tarife(tarife_tipi, ucret);
 
+CREATE VIEW kayitli_veri_sayisi AS
+SELECT count(*) FROM verilogglama1  JOIN verilogglama2  ON verilogglama1.verilogglama_id1=verilogglama2.verilogglama_id2;
+
+CREATE VIEW odeme_dogrulama AS
+SELECT kart_no, cvv, kart_skt FROM kart;
+
+
 SET SQL_SAFE_UPDATES = 0;
 
 INSERT INTO tarife (tarife_tipi, ucret) VALUES

@@ -49,13 +49,13 @@ input{margin: 10px; text-align: center;}
            <input type="text" name="k_kayit_kullaniciAdi" id="k_kayit_kullaniciAdi" placeholder="KULLANCI ADI" class="form-control" required maxlength="30">
            <input type="password" name="k_kayit_sifre" id="k_kayit_sifre" placeholder="SIFRE" class="form-control" required maxlength="30">
            </div>
-           <input type="text" name="k_kayit_plaka" id="k_kayit_plaka" placeholder="PLAKA"  required class="form-control" value="<?php echo $plaka; ?>" pattern="^(0[1-9]|[1-7]\d|8[0-1])[a-zA-Z]{1,3}(0[1-9]|[1-9]\d{1,3})$">
+           <input type="text" name="k_kayit_plaka" id="k_kayit_plaka" placeholder="PLAKA"  required class="form-control" value="<?php echo $plaka; ?>" pattern="^(0[1-9]|[1-7]\d|8[0-1])[a-zA-Z]{1,3}(0[1-9]|[1-9]\d{1,3})$" maxlength="9">
            <div class="adSoyad">
            <input type="text" name="k_kayit_ad" id="k_kayit_ad" placeholder="AD" class="form-control" required maxlength="30" value="<?php if(isset($ad)){echo $ad;} ?>">
            <input type="text" name="k_kayit_soyad" id="k_kayit_soyad" placeholder="SOYAD" class="form-control" required maxlength="30" value="<?php if(isset($soyad)){echo $soyad;} ?>">
            </div>
            <input type="text" name="k_kayit_tc_no" id="k_kayit_tc_no" placeholder="TC" class="form-control" required minlength="11" maxlength="11">
-           <input type="text" name="k_kayit_tel_no" id="telefon_no" placeholder="TELEFON (5XX0000000)" required class="form-control" minlength="10" maxlength="10" value="<?php if(isset($telefon)){echo $telefon;} ?>">
+           <input type="text" name="k_kayit_tel_no" id="telefon_no" placeholder="TELEFON (5XX0000000)" pattern="5[0-9]{9}" required class="form-control" minlength="10" maxlength="10" value="<?php if(isset($telefon)){echo $telefon;} ?>">
             <select name="tarife" required id="tarife" class="form-control secim">
                 <option value="#" >TARİFE ▼</option>
                 <?php $sonuc=tarifeVeri();$i=1; while($dizi=mysqli_fetch_assoc($sonuc)):?>

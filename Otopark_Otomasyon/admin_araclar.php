@@ -99,7 +99,7 @@ table,tr,td,th{
                         <input type="submit" value="ARAMA" name="arama" class="btn btn-danger kalam-regular" style="width:10vw">
                         </form>
                         <form action="admin_araclar.php" method="POST">
-                        <input type="text" name="ara_plaka" id="ara_plaka" style="width: 200px;" required class="form-control" placeholder="PLAKA">
+                        <input type="text" name="ara_plaka" id="ara_plaka" style="width: 200px;" required class="form-control" placeholder="PLAKA" pattern="^(0[1-9]|[1-7]\d|8[0-1])[a-zA-Z]{1,3}(0[1-9]|[1-9]\d{1,3})$" maxlength="9">
                         <input type="submit" value="ARAMA" name="plaka_arama" class="btn btn-danger kalam-regular" style="width:10vw">
                         </form>
                 </div>

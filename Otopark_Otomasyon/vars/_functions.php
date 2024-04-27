@@ -78,7 +78,7 @@ function randevuKontrol($giris,$cikis){
 function odeme($kartNo,$cvv,$skt){
     include "baglan.php";
     $kontrol=false;
-    $query="SELECT kart_no, cvv, kart_skt FROM kart";
+    $query="SELECT * FROM odeme_dogrulama";
     $sonuc = mysqli_query($connection, $query);
     while($dizi1=mysqli_fetch_assoc($sonuc)){
         if($kartNo==$dizi1["kart_no"] && $cvv==$dizi1["cvv"] && $skt==$dizi1["kart_skt"])
@@ -521,7 +521,7 @@ function veriSil(){
 }
 function toplamKayitliVeri(){
     include "baglan.php";
-    $query="SELECT count(*) FROM verilogglama1  JOIN verilogglama2  ON verilogglama1.verilogglama_id1=verilogglama2.verilogglama_id2";
+    $query="SELECT * FROM kayitli_veri_sayisi";
     $sonuc=mysqli_query($connection,$query);
     $dizi=mysqli_fetch_row($sonuc);
     $sayi=$dizi[0];

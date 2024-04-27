@@ -49,13 +49,13 @@ input{margin: 10px;}
         <div class="bilgi">
         <div class="col-12">
            <form action="rezervasyon_kontrol.php" method="POST">
-           <input type="text" name="plaka1" id="plaka1" placeholder="PLAKA"  required class="form-control" value="<?php echo $plaka; ?>" pattern="^(0[1-9]|1\d|2\d|3\d|4\d|5\d|6\d|7\d|8\d|9\d)([a-zA-Z]{1,3})(\d{1,3})$" maxlength="9">
+           <input type="text" name="plaka1" id="plaka1" placeholder="PLAKA"  required class="form-control" value="<?php echo $plaka; ?>" pattern="^(0[1-9]|[1-7]\d|8[0-1])[a-zA-Z]{1,3}(0[1-9]|[1-9]\d{1,3})$" maxlength="9">
            <div class="adSoyad">
            <input type="text" name="ad" id="ad" placeholder="AD" class="form-control" required maxlength="30" value="<?php if(isset($ad)){echo $ad;} ?>">
            <input type="text" name="soyad" id="soyad" placeholder="SOYAD" class="form-control" required maxlength="30" value="<?php if(isset($soyad)){echo $soyad;} ?>">
            </div>
            <input type="text" name="tc_no" id="tc_no" placeholder="TC" class="form-control" required minlength="11" maxlength="11">
-           <input type="text" name="telefon_no" id="telefon_no" placeholder="TELEFON (5XX0000000)" required class="form-control" minlength="10" maxlength="10" value="<?php if(isset($telefon)){echo $telefon;} ?>">
+           <input type="text" name="telefon_no" id="telefon_no" placeholder="TELEFON (5XX0000000)" pattern="5[0-9]{9}" required class="form-control" minlength="10" maxlength="10" value="<?php if(isset($telefon)){echo $telefon;} ?>">
             <select name="tarife" required id="tarife" class="form-control secim">
                 <option value="#" >TARİFE ▼</option>
                 <?php $sonuc=tarifeVeri(); $i=1; while($dizi=mysqli_fetch_assoc($sonuc)):?>

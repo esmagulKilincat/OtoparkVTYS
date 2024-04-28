@@ -480,7 +480,7 @@ function veriSil(){
     $query ="SELECT rez_id FROM rezervasyon";
     $sonuc=mysqli_query($connection,$query);
     $rez_tablo_rez_idler=[];
-    $sonuc_dizi=[];
+    $sonuc_dizi=[];  
     while($gelen=mysqli_fetch_assoc($sonuc))
     {
         array_push($rez_tablo_rez_idler,$gelen["rez_id"]);

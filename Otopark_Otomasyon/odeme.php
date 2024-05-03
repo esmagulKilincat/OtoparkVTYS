@@ -175,7 +175,7 @@ td{
 
                
             <?php else:?>
-                <div class="alert alert-success kalam-regular" role="alert">
+                <div class="alert alert-danger kalam-regular" role="alert">
                 ÖDEME BAŞARISIZ, RANDEVU İŞLEMİ GERÇEKLEŞMEMİŞTİR.
                 </div>
                 

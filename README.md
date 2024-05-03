@@ -48,7 +48,7 @@ Airport Parking Umuttepe uygulaması, kullanıcıların ve havalimanı işletmel
 
 ## Kurulum
 
-1. Bu depoyu klonlayın: https://github.com/YusufPerktas/OtoparkVTYS.git
+1. Bu depoyu klonlayın: https://github.com/esmagulKilincat/OtoparkVTYS.git
 2. Veritabanı şemasını MySQL'e yükleyin: `otopark_veritabanı.sql`
 3. Projeyi bir PHP sunucusunda çalıştırın.
 
